@@ -5,7 +5,7 @@ import Flexbetween from './FlexBetween'
 import { useDispatch, useSelector } from 'react-redux'
 import { setMode } from 'state'
 import { AppBar, Box, Button, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography, useTheme } from '@mui/material'
-import ProfilePhoto from "assets/meet.jpeg"
+import ProfilePhoto from "assets/furrisic.jpg"
 import { useGetUserQuery } from 'state/api'
 const Navbar = ({
     user,
@@ -49,17 +49,15 @@ const Navbar = ({
                 </Flexbetween>
             </Flexbetween>
             {/* right side */}
-            <Flexbetween gap="1.5rem">
+            <Flexbetween gap="1rem">
                 <IconButton onClick={() => dispatch(setMode())} >
                     {theme.palette.mode === "dark" ?
                         (<DarkModeOutlined sx={{ fontSize: "25px" }} />) :
                         (<LightModeOutlined sx={{ fontSize: "25px" }} />)}
                 </IconButton>
-                <IconButton>
-                    <SettingsOutlined sx={{ fontSize: "25px" }} />
-                </IconButton>
+              
                 <Flexbetween>
-                    <Button onClick={handleClick} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", textTransform: "none", gap: "1rem" }}>
+                    <Button onClick={handleClick} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", textTransform: "none", gap: "0rem" }}>
                         <Box
                             component="img"
                             alt="Profile"

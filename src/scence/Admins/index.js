@@ -6,6 +6,10 @@ import Header from 'components/Header'
 
 
 const Admins = () => {
+  const [paginationModel, setPaginationModel] = React.useState({
+    pageSize: 25,
+    page: 0,
+  });
     const theme = useTheme();
     const { data, isLoading } = useGetAdminQuery();
     console.log("this is data",data);
@@ -31,7 +35,7 @@ const Admins = () => {
             headerName: "Phone Number",
             flex: 0.5,
             renderCell: (params) => {
-                return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
+                return params.value.replace(/^(\d{5})(\d{5})/, "$1-$2");
             },
         },
         {
@@ -86,6 +90,9 @@ const Admins = () => {
           getRowId={(row) => row._id}
           rows={data || []}
           columns={columns}
+          paginationModel={paginationModel}
+          onPaginationModelChange={setPaginationModel}
+        
           components={{
             // ColumnMenu: CustomColumnMenu,
           }}

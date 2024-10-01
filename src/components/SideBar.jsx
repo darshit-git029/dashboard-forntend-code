@@ -30,7 +30,7 @@ import {
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Flexbetween from './FlexBetween.jsx';
-import ProfilePhoto from "assets/meet.jpeg";
+import ProfilePhoto from "assets/furrisic.jpg";
 import { useGetUserQuery } from 'state/api.js';
 
 const navItems = [
@@ -161,10 +161,10 @@ const SideBar = ({
                   {data?.user?.name || "User Name"}
                 </Typography>
                 <Typography fontSize="0.8rem" sx={{ color: theme.palette.secondary[200] }}>
-                  { "Occupation"}
+                  {data?.user?.occupation}
                 </Typography>
               </Box>
-              <SettingsOutlined sx={{ color: theme.palette.secondary[300], fontSize: "25px" }} />
+              {/* <SettingsOutlined sx={{ color: theme.palette.secondary[300], fontSize: "25px" }} /> */}
             </Flexbetween>
           </Box>
         </Drawer>

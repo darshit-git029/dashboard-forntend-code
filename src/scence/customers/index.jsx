@@ -8,8 +8,10 @@ const Customers = () => {
 
     const theme = useTheme();
     const { data, isLoading } = useGetCustomersQuery();
-    console.log("this is customers data:", data);
-
+    const [paginationModel, setPaginationModel] = React.useState({
+        pageSize: 25,
+        page: 0,
+    });
     const columns = [
         {
             field: "_id",
@@ -33,33 +35,60 @@ const Customers = () => {
             renderCell: (params) => {
                 return params.value.replace(/^(\d{5})(\d{5})/, "$1-$2")
             }
-        }, 
+        },
         {
             field: "country",
             headerName: "Country",
             flex: 0.4
         },
         {
-            field :"occupation",
-            headerName:"Occupation",
-            flex:1
+            field: "occupation",
+            headerName: "Occupation",
+            flex: 1
         },
         {
-            field :"role",
-            headerName:"Role",
-            flex:0.5
+            field: "role",
+            headerName: "Role",
+            flex: 0.5
         },
     ]
 
     return (
         <Box m="1.5rem 2.5rem">
             <Header title="CUSTOMERS" subtitle="List of Customers." />
-            <Box mt="40px" height="75vh" width="100%">
+            <Box mt="40px" height="75vh" width="100%"
+                sx={{
+                    "& .MuiDataGrid-root": {
+                        border: "none",
+                    },
+                    "& .MuiDataGrid-cell": {
+                        borderBottom: "none",
+                    },
+                    "& .MuiDataGrid-columnHeaders": {
+                        backgroundColor: theme.palette.background.alt,
+                        color: theme.palette.secondary[100],
+                        borderBottom: "none",
+                    },
+                    "& .MuiDataGrid-virtualScroller": {
+                        backgroundColor: theme.palette.primary.light,
+                    },
+                    "& .MuiDataGrid-footerContainer": {
+                        backgroundColor: theme.palette.background.alt,
+                        color: theme.palette.secondary[100],
+                        borderTop: "none",
+                    },
+                    "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+                        color: `${theme.palette.secondary[200]} !important`,
+                    },
+                }}
+            >
                 <DataGrid
                     loading={isLoading || !data}
                     getRowId={(row) => row._id}
                     rows={data || []}
                     columns={columns}
+                    paginationModel={paginationModel}
+                    onPaginationModelChange={setPaginationModel}
                 />
             </Box>
         </Box>
