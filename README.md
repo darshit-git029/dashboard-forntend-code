@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# JOB-portal
+**A job portal is a website where people who need jobs can find jobs and companies looking for job seekers can find the perfect employees
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ # PROJECT DESCRIPTION
 
-## Available Scripts
+It serves as a medium where job seekers can create profiles, upload resumes, and search for job openings across various industries and locations
+So what our app does is fairly simple. 
+These portals allow job seekers to search for job vacancies, submit their resume's or CV's, and apply for jobs.
 
-In the project directory, you can run:
+ # Features
 
-### `npm start`
+ We focussed our efforts to build an intuitive ,clean and simple UI. For the same, we encompassed card UI in our app. 
+ We also implemented swipeable tabs so as to provide ease in navigating between different fragments.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User-Side Features
+- **Profile Creation**: Job seekers can create and edit profiles with personal details.
+- **Resume Upload**: Users can upload their resumes or CVs in supported file formats.
+- **Job Search**: Search for job openings across different industries, locations, and job types.
+- **Apply for Jobs**: Submit applications directly through the platform with the uploaded resume.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Admin-Side Features
+- **Company Management**: Admins can add and manage companies.
+- **Job Listings**: Admins can post new jobs, edit existing ones, and remove outdated listings.
+- **Application Management**: Admins can view applications submitted by job seekers and manage job posting details.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ # Screenshort
 
-### `npm run build`
+#### User side
+ 
+ ### Home page desgin
+![Screenshot (104)](https://github.com/user-attachments/assets/2784d74f-5cd3-4064-b013-3b27c98c339d)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### sign-up page
+![Screenshot (105)](https://github.com/user-attachments/assets/17c578ad-23b4-47d5-8206-289654229e62)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### login page
+![Screenshot (106)](https://github.com/user-attachments/assets/84c84b69-4075-491c-bc65-e726f272f5bf)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### job page
+![Screenshot (107)](https://github.com/user-attachments/assets/37bfe0b6-091e-469a-a33d-4bff3251beef)
 
-### `npm run eject`
+### job apply page
+ ![Screenshot (108)](https://github.com/user-attachments/assets/89933482-a24b-4ea0-97ec-d5f7e375b507)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Admin side
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Admin home page
+![Screenshot (109)](https://github.com/user-attachments/assets/5595b93d-98c3-459e-80b1-ac6502076fc5)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Add new company
+![Screenshot (109)](https://github.com/user-attachments/assets/a6c1b36c-d5db-4b14-9973-f107c57c4042)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Job page
+![Screenshot 2024-10-05 172637](https://github.com/user-attachments/assets/f2ec05b7-5d5d-4b82-8273-d039901ab642)
 
-## Learn More
+### Create new job
+![Screenshot 2024-10-05 172709](https://github.com/user-attachments/assets/4697662e-6247-4d61-a416-569470305112)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Technologies use
 
-### Code Splitting
+#### Frontend side
+##### - React js
+##### - html and css
+##### - vite 
+##### - shadcn UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Backend side
+##### - nodejs
+##### - express js
+##### - redux for stat management
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Database 
+##### - Mongo Database
